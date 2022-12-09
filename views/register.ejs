@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Slide Bar</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h1 style="color: rgb(34, 3, 3);"> <%= title %>  </h1>
+  <h1 style="color: rgb(65, 211, 7);"> <%= password %>  </h1>
+  <h1 style="color: rgb(255, 0, 200);"> <%= email %>  </h1>
+
+  <div class="main">
+    <input type="checkbox" id="chk" aria-hidden="true">
+      <!--signup-->
+      <div class="signup">
+        <form action="/register" method="post">
+          <label for="chk" aria-hidden="true">Sign up</label>
+          <input type="text" name="name" placeholder="User name">
+          <input type="number" name="number" placeholder="Phone number">
+          <input type="email" name="email" placeholder="Email">
+          <input type="password" name="password" placeholder="Password">
+          <input type="password" name="cpassword" placeholder="Confirm Password">
+          <button type="submit">Sign up</button>
+        </form>
+      </div>
+    <!--login-->
+      <div class="login">
+        <form method="post" action="/login">
+          <label for="chk" aria-hidden="true">Login</label>
+          <input type="email" name="email" placeholder="Email" required="">
+          <input type="password" name="password" placeholder="Password" required="">
+        </form>
+      </div>
+  </div>
+</body>
+</html>
